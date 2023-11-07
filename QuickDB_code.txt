@@ -1,0 +1,37 @@
+Departments
+---
+Department_Number varchar pk
+Department_Name varchar
+
+
+Department_Employees
+---
+Employee_Number int pk fk - Employees.Employee_Number
+Department_Number varchar pk fk - Departments.Department_Number
+
+
+
+Department_Manager
+---
+Department_Number varchar pk fk - Departments.Department_Number
+Employee_Number int pk fk - Employees.Employee_Number
+
+Employees
+---
+Employee_Number int pk 
+Employee_title varchar fk - Titles.title_id
+birth_date date
+first_name varchar
+last_name varchar
+sex varchar
+hire_date date
+
+Salaries
+---
+Employee_Number int pk fk - Employees.Employee_Number
+Salary int
+
+Titles
+---
+title_id varchar pk
+title varchar
